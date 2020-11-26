@@ -1,7 +1,10 @@
 import express from "express";
 import data from "./data.js";
+import morgan from "morgan";
 
 const app = express();
+
+app.use(morgan("dev"));
 
 app.get("/api/products", (req, res) => {
   res.json(data.products);
