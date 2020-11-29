@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: "1",
       name: "Bicycle 1",
       category: "T type",
       image: "/images/p1.jpg",
@@ -29,7 +28,6 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "2",
       name: "Bicycle 2",
       category: "Y type",
       image: "/images/p2.jpg",
@@ -41,7 +39,6 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "3",
       name: "Bicycle 3",
       category: "T type",
       image: "/images/p3.jpg",
@@ -53,7 +50,6 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "4",
       name: "Bicycle 4",
       category: "T type",
       image: "/images/p4.jpg",
@@ -65,7 +61,6 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "5",
       name: "Bicycle 5",
       category: "Y type",
       image: "/images/p5.jpg",
@@ -77,7 +72,6 @@ const data = {
       description: "high quality product",
     },
     {
-      _id: "6",
       name: "Bicycle 6",
       category: "Y type",
       image: "/images/p6.jpg",
