@@ -54,7 +54,9 @@ export default function CartView(props) {
                     <select
                       value={item.qty}
                       onChange={(e) =>
-                        dispatch(item.product, Number(e.target.value))
+                        dispatch(
+                          addToCart(item.product, Number(e.target.value))
+                        )
                       }
                     >
                       {[...Array(item.countInStock).keys()].map((x) => (
