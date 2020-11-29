@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import data from "./data.js";
 import morgan from "morgan";
 import userRouter from "./routers/userRouter.js";
+import productRouter from "./routers/productRouter.js";
 
 dotenv.config();
 
@@ -22,28 +22,14 @@ connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
 
-app.get("/api/products/:id", (req, res) => {
-  const product = data.products.find(
-    (product) => product._id === req.params.id
-  );
-  if (product) {
-    res.json(product);
-  } else {
-    res.status(404).json({ message: "Product Not Found" });
-  }
-});
-
-app.get("/api/products", (req, res) => {
-  res.json(data.products);
-});
-
 app.use("/api/users", userRouter);
+app.use("/api/products", productRouter);
 
 app.get("/", (req, res) => {
   res.json("Server is ready");
 });
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   res.status(500).json({ message: err.message });
 });
 
