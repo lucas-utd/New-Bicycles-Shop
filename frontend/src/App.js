@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
 import ProductView from "./views/ProductView";
 
@@ -19,6 +20,7 @@ function App() {
           </div>
         </header>
         <main>
+          <Route path="/cart/:id?" component={CartView}></Route>
           <Route path="/product/:id" component={ProductView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
