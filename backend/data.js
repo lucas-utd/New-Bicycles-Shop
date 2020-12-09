@@ -17,7 +17,7 @@ const data = {
   ],
   products: [
     {
-      name: "Bicycle 1",
+      name: "Bike 1",
       category: "T type",
       image: "/images/p1.jpg",
       price: 120,
@@ -28,7 +28,7 @@ const data = {
       description: "high quality product",
     },
     {
-      name: "Bicycle 2",
+      name: "Bike 2",
       category: "Y type",
       image: "/images/p2.jpg",
       price: 100,
@@ -39,7 +39,7 @@ const data = {
       description: "high quality product",
     },
     {
-      name: "Bicycle 3",
+      name: "Bike 3",
       category: "T type",
       image: "/images/p3.jpg",
       price: 220,
@@ -50,7 +50,7 @@ const data = {
       description: "high quality product",
     },
     {
-      name: "Bicycle 4",
+      name: "Bike 4",
       category: "T type",
       image: "/images/p4.jpg",
       price: 78,
@@ -61,7 +61,7 @@ const data = {
       description: "high quality product",
     },
     {
-      name: "Bicycle 5",
+      name: "Bike 5",
       category: "Y type",
       image: "/images/p5.jpg",
       price: 65,
@@ -72,7 +72,7 @@ const data = {
       description: "high quality product",
     },
     {
-      name: "Bicycle 6",
+      name: "Bike 6",
       category: "Y type",
       image: "/images/p6.jpg",
       price: 139,
