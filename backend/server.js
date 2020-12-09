@@ -10,6 +10,8 @@ dotenv.config();
 const app = express();
 
 app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const uri = process.env.REACT_APP_ATLAS_URI;
 mongoose.connect(uri, {
