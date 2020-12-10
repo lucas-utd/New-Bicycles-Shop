@@ -6,6 +6,7 @@ import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
 import ProductView from "./views/ProductView";
 import RegisterView from "./views/RegisterView";
+import ShippingAddressView from "./views/ShippingAddressView";
 import SigninView from "./views/SigninView";
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
           <Route path="/product/:id" component={ProductView}></Route>
           <Route path="/signin" component={SigninView}></Route>
           <Route path="/register" component={RegisterView}></Route>
+          <Route path="/shipping" component={ShippingAddressView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
