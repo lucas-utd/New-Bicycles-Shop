@@ -5,6 +5,7 @@ import { signout } from "./actions/userAction";
 import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
 import PaymentMethodView from "./views/PaymentMethodView";
+import PlaceOrderView from "./views/PlaceOrderView";
 import ProductView from "./views/ProductView";
 import RegisterView from "./views/RegisterView";
 import ShippingAddressView from "./views/ShippingAddressView";
@@ -62,6 +63,7 @@ function App() {
           <Route path="/register" component={RegisterView}></Route>
           <Route path="/shipping" component={ShippingAddressView}></Route>
           <Route path="/payment" component={PaymentMethodView}></Route>
+          <Route path="/placeorder" component={PlaceOrderView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
