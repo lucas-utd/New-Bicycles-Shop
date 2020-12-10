@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userAction";
 import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
+import PaymentMethodView from "./views/PaymentMethodView";
 import ProductView from "./views/ProductView";
 import RegisterView from "./views/RegisterView";
 import ShippingAddressView from "./views/ShippingAddressView";
@@ -60,6 +61,7 @@ function App() {
           <Route path="/signin" component={SigninView}></Route>
           <Route path="/register" component={RegisterView}></Route>
           <Route path="/shipping" component={ShippingAddressView}></Route>
+          <Route path="/payment" component={PaymentMethodView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
