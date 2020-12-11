@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userAction";
 import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
+import OrderView from "./views/OrderView";
 import PaymentMethodView from "./views/PaymentMethodView";
 import PlaceOrderView from "./views/PlaceOrderView";
 import ProductView from "./views/ProductView";
@@ -64,6 +65,7 @@ function App() {
           <Route path="/shipping" component={ShippingAddressView}></Route>
           <Route path="/payment" component={PaymentMethodView}></Route>
           <Route path="/placeorder" component={PlaceOrderView}></Route>
+          <Route path="/order/:id" component={OrderView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
