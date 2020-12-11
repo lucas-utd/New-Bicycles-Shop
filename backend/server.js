@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
+import orderRouter from "./routers/orderRouter.js";
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ connection.once("open", () => {
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/orders", orderRouter);
 
 app.get("/", (req, res) => {
   res.json("Server is ready");
