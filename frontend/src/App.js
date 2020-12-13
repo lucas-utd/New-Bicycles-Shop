@@ -9,6 +9,7 @@ import OrderView from "./views/OrderView";
 import PaymentMethodView from "./views/PaymentMethodView";
 import PlaceOrderView from "./views/PlaceOrderView";
 import ProductView from "./views/ProductView";
+import ProfileView from "./views/ProfileView";
 import RegisterView from "./views/RegisterView";
 import ShippingAddressView from "./views/ShippingAddressView";
 import SigninView from "./views/SigninView";
@@ -47,6 +48,9 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
+                  <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li>
                   <li>
@@ -71,6 +75,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderView}></Route>
           <Route path="/order/:id" component={OrderView}></Route>
           <Route path="/orderhistory" component={OrderHistoryView}></Route>
+          <Route path="/profile" component={ProfileView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
