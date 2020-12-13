@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userAction";
 import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
+import OrderHistoryView from "./views/OrderHistoryView";
 import OrderView from "./views/OrderView";
 import PaymentMethodView from "./views/PaymentMethodView";
 import PlaceOrderView from "./views/PlaceOrderView";
@@ -46,6 +47,9 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
+                    <Link to="/orderhistory">Order History</Link>
+                  </li>
+                  <li>
                     <Link to="#signout" onClick={signoutHandler}>
                       Sign Out
                     </Link>
@@ -66,6 +70,7 @@ function App() {
           <Route path="/payment" component={PaymentMethodView}></Route>
           <Route path="/placeorder" component={PlaceOrderView}></Route>
           <Route path="/order/:id" component={OrderView}></Route>
+          <Route path="/orderhistory" component={OrderHistoryView}></Route>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
