@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userAction";
+import AdminRoute from "./components/AdminRoute";
 import PrivateRoute from "./components/PrivateRoute";
 import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
@@ -9,6 +10,7 @@ import OrderHistoryView from "./views/OrderHistoryView";
 import OrderView from "./views/OrderView";
 import PaymentMethodView from "./views/PaymentMethodView";
 import PlaceOrderView from "./views/PlaceOrderView";
+import ProductListView from "./views/ProductListView";
 import ProductView from "./views/ProductView";
 import ProfileView from "./views/ProfileView";
 import RegisterView from "./views/RegisterView";
@@ -98,6 +100,10 @@ function App() {
           <Route path="/order/:id" component={OrderView}></Route>
           <Route path="/orderhistory" component={OrderHistoryView}></Route>
           <PrivateRoute path="/profile" component={ProfileView}></PrivateRoute>
+          <AdminRoute
+            path="/productlist"
+            component={ProductListView}
+          ></AdminRoute>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
