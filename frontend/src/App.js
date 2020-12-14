@@ -10,6 +10,7 @@ import OrderHistoryView from "./views/OrderHistoryView";
 import OrderView from "./views/OrderView";
 import PaymentMethodView from "./views/PaymentMethodView";
 import PlaceOrderView from "./views/PlaceOrderView";
+import ProductEditView from "./views/ProductEditView";
 import ProductListView from "./views/ProductListView";
 import ProductView from "./views/ProductView";
 import ProfileView from "./views/ProfileView";
@@ -91,7 +92,12 @@ function App() {
         </header>
         <main>
           <Route path="/cart/:id?" component={CartView}></Route>
-          <Route path="/product/:id" component={ProductView}></Route>
+          <Route path="/product/:id" component={ProductView} exact></Route>
+          <Route
+            path="/product/:id/edit"
+            component={ProductEditView}
+            exact
+          ></Route>
           <Route path="/signin" component={SigninView}></Route>
           <Route path="/register" component={RegisterView}></Route>
           <Route path="/shipping" component={ShippingAddressView}></Route>
