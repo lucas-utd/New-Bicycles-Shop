@@ -7,6 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import CartView from "./views/CartView";
 import HomeView from "./views/HomeView";
 import OrderHistoryView from "./views/OrderHistoryView";
+import OrderListView from "./views/OrderListView";
 import OrderView from "./views/OrderView";
 import PaymentMethodView from "./views/PaymentMethodView";
 import PlaceOrderView from "./views/PlaceOrderView";
@@ -110,6 +111,7 @@ function App() {
             path="/productlist"
             component={ProductListView}
           ></AdminRoute>
+          <AdminRoute path="/orderlist" component={OrderListView}></AdminRoute>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
