@@ -135,9 +135,9 @@ export default function ProductEditView(props) {
                 label="Choose Image"
                 onChange={uploadFileHandler}
               ></input>
-              {loadingUpdate && <LoadingBox></LoadingBox>}
-              {errorUpdate && (
-                <MessageBox variant="danger">{errorUpdate}</MessageBox>
+              {loadingUpload && <LoadingBox></LoadingBox>}
+              {errorUpload && (
+                <MessageBox variant="danger">{errorUpload}</MessageBox>
               )}
             </div>
             <div>
