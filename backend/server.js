@@ -2,9 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import morgan from "morgan";
+import path from "path";
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 import orderRouter from "./routers/orderRouter.js";
+import uploadRouter from "./routers/uploadRouter.js";
 
 dotenv.config();
 
@@ -25,6 +27,7 @@ connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
 
+app.use("/api/uploads", uploadRouter);
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
@@ -32,6 +35,8 @@ app.use("/api/orders", orderRouter);
 app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.ReACT_APP_PAYPAL_CLIENT_ID || "sb");
 });
+const __dirname = path.resolve();
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 app.get("/", (req, res) => {
   res.json("Server is ready");
