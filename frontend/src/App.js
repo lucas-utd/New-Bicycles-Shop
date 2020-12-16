@@ -18,6 +18,8 @@ import ProfileView from "./views/ProfileView";
 import RegisterView from "./views/RegisterView";
 import ShippingAddressView from "./views/ShippingAddressView";
 import SigninView from "./views/SigninView";
+import UserEditView from "./views/UserEditView";
+import UserListView from "./views/UserListView";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -112,6 +114,11 @@ function App() {
             component={ProductListView}
           ></AdminRoute>
           <AdminRoute path="/orderlist" component={OrderListView}></AdminRoute>
+          <AdminRoute path="/userlist" component={UserListView}></AdminRoute>
+          <AdminRoute
+            path="/user/:id/edit"
+            component={UserEditView}
+          ></AdminRoute>
           <Route path="/" component={HomeView} exact></Route>
         </main>
         <footer className="row center">All right reserved</footer>
